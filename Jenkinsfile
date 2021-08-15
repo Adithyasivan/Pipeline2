@@ -10,6 +10,15 @@ pipeline {
       }
     }
 
+    stage('') {
+      steps {
+        withMaven(jdk: 'jdk11', maven: 'maven3') {
+          sh 'mvn test'
+        }
+
+      }
+    }
+
   }
   environment {
     AUTHOR = 'Adithya'
