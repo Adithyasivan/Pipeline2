@@ -27,7 +27,6 @@ pipeline {
 
       }
     }
-
   }
   environment {
     AUTHOR = 'Adithya'
