@@ -19,9 +19,9 @@ pipeline {
       }
     }
 
-    stage('Publish result') {
+    stage('Publish test result') {
       steps {
-        withMaven(jdk: 'jdk', maven: 'maven3') {
+        withMaven(jdk: 'jdk11', maven: 'maven3') {
           junit 'target/**/*.xml'
         }
 
