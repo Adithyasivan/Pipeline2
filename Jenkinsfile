@@ -19,6 +19,15 @@ pipeline {
       }
     }
 
+    stage('Publish result') {
+      steps {
+        withMaven(jdk: 'jdk', maven: 'maven3') {
+          junit 'target/**/.*xml'
+        }
+
+      }
+    }
+
   }
   environment {
     AUTHOR = 'Adithya'
